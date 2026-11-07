@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+<properties>
+<property name="basePath">./logs</property>
+</properties>
+    <Appenders>
+
+        <!-- Print logs on the Eclipse console -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %c{1} - %msg%n"/>
+        </Console>
+
+        <!-- Write logs into a file -->
+        <RollingFile name="File"
+                     fileName="${basePath}/automation.log"
+                     filePattern="${basePath}/automation-%d{yyyy-MM-dd}-%i.log.gz">
+
+            <PatternLayout
+                pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %c{1} - %msg%n"/>
+
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+
+        </RollingFile>
+
+    </Appenders>
+
+    <Loggers>
+        <Root level="debug">
+           <!----> <AppenderRef ref="Console"/>//COMMENTED CONSOLE
+            <AppenderRef ref="File"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
+ 

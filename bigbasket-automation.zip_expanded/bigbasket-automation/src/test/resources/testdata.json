@@ -1,0 +1,11 @@
+[
+  {
+    "scenario": "Milk (Amul) + Biscuits end-to-end",
+    "location": "560001",
+    "primaryProduct": "Milk",
+    "brandFilter": "Amul",
+    "secondaryProduct": "Biscuits",
+    "targetQuantity": 2,
+    "expectedLoginErrorKeyword": "valid"
+  }
+]

@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="BigBasket Suite" verbose="1">
+  <listeners>
+    <listener class-name="com.automation.bigbasket.listeners.TestListener"/>
+  </listeners>
+  <test name="BigBasket E2E Grocery Flow">
+    <classes>
+      <class name="com.automation.bigbasket.tests.BigBasketE2ETest"/>
+    </classes>
+  </test>
+</suite>
